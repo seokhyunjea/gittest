@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>::: 8가지 경쟁력을 통한 창조적인 조직의 자기혁신 :::</title>
+		<link rel="stylesheet" type="text/css" href="./common/bootstrap/css/bootstrap.min.css">
+		<style type="text/css">
+		/*@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);*/
+
+		@charset "utf-8";
+		*, h1, h2, h3, h4 {
+		  margin:0;
+		  padding:0;
+		  border:0; 
+		  line-height:1.3; 
+		  font-family: 'Nanum Gothic', '나눔고딕', '맑은 고딕', 'Malgun Gothic', Dotum;
+		  color:#000;
+		}
+		a, a:hover, a:active {
+			color: #26c;
+		}
+		</style>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script type="text/javascript" src="./common/bootstrap/js/bootstrap.min.js"></script>
+
+		<script language="JavaScript">
+
+			var chapter_titles = new Array();
+
+			chapter_titles = [
+				"창조의 시대, 창의형 인재의 시대",
+				"창의적 혁신의 아이콘으로부터 무엇을 배울 수 있을까?",
+				"창의적 인재를 위한 핵심 키워드",
+				"21세기 변화 패러다임과 변화의 핵심",
+				"긍정에너지를 통한 조직역량 강화",
+				"직원이 행복해야 조직이 성공한다",
+				"업무몰입을 위한 마음경영",
+				"인내는 쓰고, 열매는 달다!",
+				"성공한 사람, 성공한 조직의 자기관리 비법",
+				"21세기는 하트스토밍의 시대",
+				"신뢰를 구축하는 소통의 리더십",
+				"소통의 에너지를 키워라!",
+				"도전 없이는 미래도 없다.",
+				"열정적이고 몰입하는 조직만들기",
+				"변화와 혁신의 파도타기",
+				"역경을 극복하라!",
+				"실패를 용인하는 조직문화 만들기",
+				"두려움을 떨치고, 자신감을 회복하라!",
+				"21세기는 평생학습의 시대",
+				"조직학습의 시대",
+				"경쟁력 있는 인적자원 만들기",
+				"생각에서 행동으로, 이제는 실천이다!",
+				"실행력이 주는 힘, 실행조직 만들기",
+				"모방과 역발상이 중요하다."
+			];
+
+			var openTarget = "_color";
+			var nWidth= 1000;
+			var nHeight = 670;
+			var sw = screen.availWidth;
+			var sh = screen.availHeight;
+			var px = (sw - nWidth) / 2;
+			var py = (sh - nHeight) / 2;
+			var openOption = "width = " + nWidth + ", height = " + nHeight + ", toolbar = no, scrollbars = no, top = " + py + ", left = " + px;
+
+			function itostr(inum){
+				return inum<10 ? String("0"+inum):String(inum);
+			}
+
+			function openWin(n){
+				if (n == 0) {
+					$("#myModalLabel").text(n + "차시 - " +  chapter_titles[n - 1]);
+					$("#construction").modal('show');
+				} else {
+					var openURL = n+"/01.html";
+					w = window.open(openURL, openTarget, openOption);
+					w.focus();	
+				}
+				
+			}
+
+			$(document).ready(function() {
+				$("table#chapter_table tbody tr").each(function() {
+					var _seq = $(this).attr("id").split("_")[1];
+					var _html = '<a id="link_' + _seq + '" href="javascript:openWin(\'' + itostr(parseInt(_seq)) + '\')" onFocus="this.blur()">' + chapter_titles[parseInt(_seq) - 1] + '</a>';
+					$(this).find("td.chapter").html(_seq);
+					$(this).find("td.title").html(_html);
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-8 col-xs-offset-2">
+
+					<div class="page-header">
+						<h2>[8가지 경쟁력을 통한 창조적인 조직의 자기혁신]</h2>
+					</div>
+
+					<table id="chapter_table" class="table table-bordered table-striped table-condensed table-hover">
+						<thead>
+							<tr>
+								<th colspan="3">::: 8가지 경쟁력을 통한 창조적인 조직의 자기혁신 :::</th>
+							</tr>
+							<tr>
+								<th class="col-xs-3">모듈</th><th>차시</th><th>차시명</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="chapter_1"><td rowspan="3" class="centering">M-1<br/>첫 번째 경쟁력 : 창의력</td>
+								<td class="chapter">차시</td><td class="title">차시명</td>
+							</tr>
+							<tr id="chapter_2"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+							<tr id="chapter_3"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+
+							<tr id="chapter_4"><td rowspan="3" class="centering">M-2<br/>두 번째 경쟁력 : 태도력</td>
+								<td class="chapter">차시</td><td class="title">차시명</td>
+							</tr>
+							<tr id="chapter_5"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+							<tr id="chapter_6"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+
+							<tr id="chapter_7"><td rowspan="3" class="centering">M-3<br/>세 번째 경쟁력 : 절제력</td>
+								<td class="chapter">차시</td><td class="title">차시명</td>
+							</tr>
+							<tr id="chapter_8"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+							<tr id="chapter_9"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+
+							<tr id="chapter_10"><td rowspan="3" class="centering">M-4<br/>네 번째 경쟁력 : 소통력</td>
+								<td class="chapter">차시</td><td class="title">차시명</td>
+							</tr>
+							<tr id="chapter_11"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+							<tr id="chapter_12"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+
+							<tr id="chapter_13"><td rowspan="3" class="centering">M-5<br/>다섯 번째 경쟁력 : 도전력</td>
+								<td class="chapter">차시</td><td class="title">차시명</td>
+							</tr>
+							<tr id="chapter_14"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+							<tr id="chapter_15"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+
+							<tr id="chapter_16"><td rowspan="3" class="centering">M-6<br/>여섯 번째 경쟁력 : 회복력</td>
+								<td class="chapter">차시</td><td class="title">차시명</td>
+							</tr>
+							<tr id="chapter_17"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+							<tr id="chapter_18"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+
+							<tr id="chapter_19"><td rowspan="3" class="centering">M-7<br/>일곱 번째 경쟁력 : 학습력</td>
+								<td class="chapter">차시</td><td class="title">차시명</td>
+							</tr>
+							<tr id="chapter_20"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+							<tr id="chapter_21"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+
+							<tr id="chapter_22"><td rowspan="3" class="centering">M-8<br/>여덟 번째 경쟁력 : 실행력</td>
+								<td class="chapter">차시</td><td class="title">차시명</td>
+							</tr>
+							<tr id="chapter_23"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+							<tr id="chapter_24"><td class="chapter">차시</td><td class="title">차시명</td></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="construction" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        현재 개발 중 입니다.
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+	</body>
+</html>
